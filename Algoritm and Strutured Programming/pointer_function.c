@@ -39,3 +39,26 @@ Função para alocar memória dinamicamente - Fonte: elaborada pelos autores.
 
 Nesta aula você aprendeu a criar funções que, após um determinado conjunto de instruções, retorna um valor para “quem” chamou a sub-rotina. Esse conhecimento permitirá a você criar programas mais organizados, além de evitar repetição de códigos.
 */
+
+
+//CONCLUSAO
+
+/*
+
+Conclusão
+
+Você foi contratado por um laboratório de pesquisas multidisciplinar que atende a várias empresas. Seu primeiro trabalho é desenvolver uma solução para a equipe de nutrição. Um cliente deseja uma calculadora de IMC (Índice de Massa Corporal). Os nutricionistas lhe passaram a fórmula para calcular o IMC com base no peso e na altura do indivíduo.
+
+Para resolver esse problema você deve ter a fórmula para o cálculo do IMC anotada: IMC = Peso / Altura². Também será preciso criar condicionais para verificar a situação do indivíduo (abaixo do peso, peso ideal ou sobrepeso), com base em seu IMC.
+
+Eis algumas dicas para resolver o problema:
+
+    crie duas variáveis para armazenar valores reais, pois o peso e a altura certamente não serão inteiros.
+    leia o valor dessas variáveis dentro da função que calcula o IMC.
+    retorne o valor do IMC.
+    na função principal, chame a função que calcula o IMC e guarde seu retorno em uma variável inteira.
+    use uma estrutura condicional (if-else if-else) para identificar e imprimir na tela a situação do indivíduo.
+
+Eis uma possível solução para a situação problema:
+
+*/
