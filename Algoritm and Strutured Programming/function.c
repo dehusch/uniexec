@@ -33,7 +33,12 @@ A modularização é uma técnica de programação que permite a divisão da sol
 
 
 
+
+
 //SINTESE
+
+
+
 
 
 
@@ -147,3 +152,6 @@ int main(){
     return 0;
 
 }
+
+
+/*
