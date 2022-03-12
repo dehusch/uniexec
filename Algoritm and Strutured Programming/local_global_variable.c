@@ -7,6 +7,10 @@ Essa ligação iria para qual cidade? Existem várias cidades com o código 3441
 Variáveis são usadas para armazenar dados temporariamente na memória, porém o local em que esse recurso é definido no código de um programa determina seu escopo e sua visibilidade. Observe no código - Exemplo de variáveis em funções.
 Exemplo de variáveis em funções
 */
+
+
+
+/*
 #include <stdio.h>
 
 int testar(){
@@ -22,6 +26,10 @@ int main(){
 
     return 0;
 }
+*/
+
+
+
 /*
 Na implementação do código - Exemplo de variáveis em funções, temos duas variáveis chamadas “x”. Isso acarretará algum erro? A resposta, nesse caso, é não, pois mesmo as variáveis tendo o mesmo nome, elas são definidas em lugares diferentes: uma está dentro da função main() e outra dentro da testar(), e cada função terá seu espaço na memória de forma independente.
 
@@ -32,13 +40,35 @@ O escopo é dividido em duas categorias, local ou global (MANZANO; MATOS; LOUREN
 No exemplo do código - Exemplo de variáveis em funções, ambas variáveis são locais, ou seja, elas existem e podem ser vistas somente dentro do corpo da função onde foram definidas. Para definir uma variável global, é preciso criá-la fora de qualquer função, assim ela será visível por todas as funções do programa. No contexto apresentado nessa aula, elas serão criadas logo após a inclusão das bibliotecas.
 
 No código - Exemplo de variável global, é apresentado um exemplo de declaração de uma variável global, na linha 3, logo após a inclusão da biblioteca de entrada e saída padrão. Veja que na função principal não foi definida qualquer variável com o nome de “x” e mesmo assim seu valor pode ser impresso na linha 10, pois é acessado o valor da variável global. Já na linha 12 é impresso o valor da variável global modificado pela função testar(), que retorna o dobro do valor.
-Exemplo de variável global - Fonte: elaborada pelos autores.
+Exemplo de variável global - 
+*/
 
-Teste o código - Exemplo de variável global, utilizando a ferramenta Paiza.io.
 
-_______
+/*
+#include <stdio.h>
 
-🔁 Assimile
+int x = 10;
+
+void testar(){
+    x = 2 * x;
+
+}
+
+int main(){
+    printf("\nValor de x global = %d\n", x);
+    //ate este ponto a var x = 10
+    testar();
+    //quando trago testar() a var = 20
+    printf("\nValor de x global alterado em testar() = %d\n", x);
+
+    return 0;
+}
+*/
+
+
+
+/*
+Assimile
 
 A utilização de variáveis globais permite otimizar a alocação de memória, pois em vários casos o desenvolvedor não precisará criar variáveis locais. Por outro lado, essa técnica de programação deve ser usada com cautela, pois variáveis locais são criadas e destruídas ao fim da função, enquanto as globais permanecem na memória durante todo o tempo de execução.
 
