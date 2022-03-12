@@ -81,9 +81,9 @@ float calcularIMC(){
 
 int main(){
     float imc = calcularIMC();
-    if (imc < 18.5) printf("\nIMC = %.2f, Abaixo do peso!", imc);
-    else if (imc < 24.9) printf("\nIMC = %.2f, Peso ideal!", imc);
-    else printf("\nIMC = %.2f, Sobrepeso!", imc);
+    if (imc < 18.5) printf("\nIMC = %.2f, Abaixo do peso!\n", imc);
+    else if (imc < 24.9) printf("\nIMC = %.2f, Peso ideal!\n", imc);
+    else printf("\nIMC = %.2f, Sobrepeso!\n", imc);
 
     return 0;
 }
