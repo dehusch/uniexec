@@ -35,6 +35,7 @@ int main(){
     inserir(numeros);
     printf("\nDobro dos valores informados:");
     imprimir(numeros);
+    printf("\n");
 
     return 0;
 }
