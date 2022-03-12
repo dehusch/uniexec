@@ -62,3 +62,28 @@ Eis algumas dicas para resolver o problema:
 Eis uma possível solução para a situação problema:
 
 */
+
+#include <stdio.h>
+
+float calcularIMC(){
+    float peso, altura, imc;
+    
+    printf("\nInforme seu peso (kg): ");
+    scanf("%f", &peso);
+    printf("\nInforme sua altura (M): ");
+    scanf("%f", &altura);
+
+    imc = peso / (altura * altura);
+
+    return imc;
+    
+}
+
+int main(){
+    float imc = calcularIMC();
+    if (imc < 18.5) printf("\nIMC = %.2f, Abaixo do peso!", imc);
+    else if (imc < 24.9) printf("\nIMC = %.2f, Peso ideal!", imc);
+    else printf("\nIMC = %.2f, Sobrepeso!", imc);
+
+    return 0;
+}
