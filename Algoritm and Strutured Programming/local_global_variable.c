@@ -77,27 +77,55 @@ _______
 A seguir será apresentado um exemplo da utilização do escopo global de uma variável. Vamos criar um programa que calcula a média entre duas temperaturas distintas. Observe no código - Calcular média de temperatura com variável global, na linha 3, em que foram declaradas duas variáveis. É importante destacar que o programa sempre começa pela função principal e a execução inicia na linha 8.
 
 Na linha 9, é solicitado ao usuário digitar duas temperaturas (em que é pedido conforme a linha 10), as quais são armazenadas dentro das variáveis globais criadas. Na linha 11, a função calcularMedia() é invocada para fazer o cálculo da média usando os valores das variáveis globais. Nesse exemplo, fica clara a utilidade dessa técnica de programação, pois as variáveis são usadas em diferentes funções, otimizando o uso da memória, pois não foi preciso criar mais variáveis locais.
-Calcular média de temperatura com variável global - Fonte: elaborada pelos autores.
+Calcular média de temperatura com variável global 
+*/
 
-Teste o código - Calcular média de temperatura com variável global, utilizando a ferramenta Paiza.io.
 
-_______
 
-📝 Exemplificando
+/*
+#include <stdio.h>
 
-É possível criar variáveis com o mesmo nome em diferentes funções, pois o escopo delas é local. Entretanto, se existir uma variável global e uma local com mesmo nome, por exemplo:
-Variáveis com mesmo nome - Fonte: elaborada pelos autores.
+float t1, t2;
 
-Qual valor será impresso na variável x? A variável local sempre sobrescreverá o valor da global, portanto, nesse caso, será impresso o valor -1 na função principal.
+float calcularMedia(){
+    return(t1 + t2) /2;
+}
 
-Teste o código utilizando a ferramenta Paiza.io.
+int main(){
+    printf("\nDigite as duas temperaturas: ");
+    scanf("%f %f", &t1, &t2);
+    printf("\nA temperatura media é %.2f\n", calcularMedia());
+    
+    return 0;
+}
+*/
+
+
+
+/*
+A variável local sempre sobrescreverá o valor da global
 
 _______
 
 Na linguagem C, para conseguirmos acessar o valor de uma variável global, dentro de uma função que apresenta uma variável local com mesmo nome, devemos usar a instrução extern (MANZANO, 2015). No código - Variável global e local com mesmo nome, veja como utilizar variáveis globais e locais com mesmo nome na linguagem C.
 
 Observe que foi necessário criar uma variável chamada “b”, com um bloco de instruções (linhas 8 – 11), que atribui à nova variável o valor “externo” de x.
-Variável global e local com mesmo nome - Fonte: elaborada pelos autores.
-
-Teste o código- Variável global e local com mesmo nome, utilizando a ferramenta Paiza.io.
+Variável global e local com mesmo nome 
 */
+#include <stdio.h>
+
+int x = 10;
+
+
+int main(){
+    int x = -1;
+    int b;
+    {
+        extern int x; //chama o valor de x global
+        b = x;
+    }
+    printf("\nValor de x = %d\n", x);
+    printf("\nValor de b (x global) = %d\n", b);
+
+    return 0;
+}
